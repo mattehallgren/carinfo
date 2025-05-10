@@ -1,0 +1,14 @@
+CREATE TABLE ads (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255),
+    description TEXT,
+    make VARCHAR(100),
+    model VARCHAR(100),
+    model_year INT,
+    registration_number VARCHAR(20),
+    registration_number_from_image VARCHAR(20),
+    image_url TEXT,
+    page_url TEXT,
+    scraped_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE (page_url)
+);
